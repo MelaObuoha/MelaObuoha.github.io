@@ -9,3 +9,149 @@
 .hero-image {
   background-image: url("assets/robotics-hero.jpg");
 }
+
+.fire-project {
+  margin-bottom: 28px;
+}
+
+.fire-visual {
+  min-height: 480px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 72% 42%, #7a240d 0, #281813 22%, #081114 58%);
+}
+
+.fire-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(69,224,208,.08) 1px, transparent 1px), linear-gradient(90deg, rgba(69,224,208,.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to right, #000, transparent 75%);
+}
+
+.robot-body {
+  position: absolute;
+  left: 15%;
+  bottom: 24%;
+  width: 220px;
+  height: 105px;
+  border: 2px solid #6be6da;
+  background: linear-gradient(145deg, #19383d, #0b1b20);
+  box-shadow: 0 0 35px rgba(69,224,208,.24);
+}
+
+.sensor-head {
+  position: absolute;
+  width: 80px;
+  height: 55px;
+  left: 68px;
+  top: -56px;
+  border: 2px solid #6be6da;
+  background: #10262b;
+}
+
+.sensor-head::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #ffb35c;
+  right: 11px;
+  top: 18px;
+  box-shadow: 0 0 18px #ff8b32;
+}
+
+.nozzle {
+  position: absolute;
+  width: 105px;
+  height: 12px;
+  right: -88px;
+  top: 26px;
+  background: #a5b4b6;
+  transform: rotate(-12deg);
+  transform-origin: left center;
+}
+
+.wheel {
+  position: absolute;
+  width: 67px;
+  height: 67px;
+  bottom: -42px;
+  border: 9px solid #526064;
+  border-radius: 50%;
+  background: #071014;
+}
+
+.wheel.left { left: 24px; }
+.wheel.right { right: 24px; }
+
+.flame {
+  position: absolute;
+  right: 13%;
+  bottom: 22%;
+  width: 110px;
+  height: 180px;
+  filter: drop-shadow(0 0 30px rgba(255,102,31,.72));
+}
+
+.flame i {
+  position: absolute;
+  bottom: 0;
+  border-radius: 70% 30% 65% 35%;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, #ffd166, #f04c24 62%, #7d170a);
+}
+
+.flame i:nth-child(1) { width: 90px; height: 90px; left: 8px; }
+.flame i:nth-child(2) { width: 68px; height: 120px; left: 22px; bottom: 23px; }
+.flame i:nth-child(3) { width: 45px; height: 145px; left: 38px; bottom: 40px; }
+
+.spray {
+  position: absolute;
+  left: 43%;
+  right: 24%;
+  bottom: 42%;
+  height: 60px;
+  transform: rotate(-8deg);
+}
+
+.spray span {
+  position: absolute;
+  left: calc(var(--i, 1) * 12%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #dffcff;
+  box-shadow: 0 0 12px #8eefff;
+}
+
+.spray span:nth-child(1) { --i: 1; top: 22px; }
+.spray span:nth-child(2) { --i: 2; top: 12px; }
+.spray span:nth-child(3) { --i: 3; top: 30px; }
+.spray span:nth-child(4) { --i: 4; top: 4px; }
+.spray span:nth-child(5) { --i: 5; top: 25px; }
+
+.detection-box {
+  position: absolute;
+  right: 8%;
+  top: 12%;
+  padding: 13px 16px;
+  border: 1px solid rgba(255,179,92,.7);
+  color: #ffb35c;
+  font: 600 .62rem/1.7 monospace;
+  letter-spacing: .08em;
+}
+
+.detection-box b { color: #fff; }
+
+@media (max-width: 900px) {
+  .fire-visual { min-height: 400px; }
+}
+
+@media (max-width: 600px) {
+  .robot-body { left: 8%; transform: scale(.72); transform-origin: left bottom; }
+  .flame { right: 6%; transform: scale(.75); transform-origin: right bottom; }
+  .detection-box { right: 5%; top: 7%; }
+}
