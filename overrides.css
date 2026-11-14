@@ -1,0 +1,7 @@
+/* Content remains visible when visitors jump directly between sections. */
+.reveal,
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
