@@ -5,3 +5,7 @@
   transform: none;
   transition: none;
 }
+
+.hero-image {
+  background-image: url("assets/robotics-hero.jpg");
+}
